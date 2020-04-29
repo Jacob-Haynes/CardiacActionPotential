@@ -1,0 +1,90 @@
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, width=160mm, top=25mm, bottom=25mm]{geometry}
+\usepackage{multicol}
+\usepackage[square, numbers, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage[]{hyperref}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage[rightcaption]{sidecap}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+breaklines=true,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\renewcommand{\maketitle}{%
+    \begin{centering}
+    {\huge \textbf {Modelling Excitable Systems: Propagation of Cardiac Action Potential}\par}
+    \vspace{2.5cm}
+    {\Large Jacob Haynes\par}
+    \vspace{0.5cm}
+    {\large UNIVERSITY OF BATH\par}
+    \vspace{0.2cm}
+    {\small DEPARTMENT OF PHYSICS\par}
+    {\small CANDIDATE NUMBER: 21418\par}
+    {\small 05/05/2017\par}
+    \end{centering}
+    \vspace{8.5cm}
+    {\small Contact information: \par
+    Jacob Haynes \par
+    Department of Natural Sciences \par
+    University of Bath \par
+    jh835@bath.ac.uk \par
+    }
+}
+
+\renewcommand{\labelenumi}
+
+\newcommand{\eqnref}[1]{Eq.&(\ref{#1})}  
+
+\sidecaptionvpos{figure}{c}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Modelling Excitable Systems: Propagation of Cardiac Action Potential}
+\cfoot{Page \thepage}

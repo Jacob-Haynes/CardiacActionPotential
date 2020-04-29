@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+%------------------------------Page Set Up---------------------------------%
+\input{pagesetup.tex}
+\begin{document}
+%-------------------------------Title Page---------------------------------%
+\begin{titlepage}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth]{images/uob-logo-grey-transparent.eps}
+    \end{figure}
+\maketitle
+\end{titlepage}
+%--------------------------------Abstract----------------------------------%
+\section*{Abstract}
+\textbf{
+\input{0a_abstract.tex}
+}
+%----------------------------Acknowledgements-------------------------------%
+\vspace{1.5cm}
+\section*{Acknowledgements}
+\input{0b_acknowledgements.tex}
+%--------------------------------Contents-----------------------------------%
+\newpage
+\tableofcontents
+%------------------------------Introduction---------------------------------%
+\newpage
+\section{Introduction}
+    \label{section1}
+\input{1_introduction.tex}
+%---------------------------The Cardiac System------------------------------%
+\newpage
+\section{Anatomy \& Physiology of the Heart}
+    \label{section2}
+\input{2_Anatomy.tex}
+%---------------------------------------------------------------------------%
+\newpage
+\section{Models}
+    \label{section2.2}
+\input{2b_Models.tex}
+%---------------------------------------------------------------------------%
+\newpage
+\section{Electronic Model}
+    \label{section3}
+\input{3_Electronic_Model.tex}
+%---------------------------------------------------------------------------%
+\newpage
+\section{Computational Model}
+    \label{section4}
+\input{4_Computational_Model.tex}
+%---------------------------------------------------------------------------%
+\newpage
+\section{Discussion}
+    \label{section5}
+\input{5_discussion.tex}
+%---------------------------------------------------------------------------%
+\section{Conclusion}
+    \label{section6}
+\input{6_conclusion.tex}
+%---------------------------------------------------------------------------%
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{references}
+%---------------------------------------------------------------------------%
+\newpage
+\section{Appendix}
+    \label{appendix1}
+    \input{99c_appendix1.tex}
+%---------------------------------------------------------------------------%
+\end{document}
